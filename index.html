@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width initial-scale-1.0">    </head>
+       <title>Jovian Drift SOS</title>
+       <link rel="stylesheet" href="./styles/styles.css">
+    <body>
+        <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+        <form method="post" action="#">
+            <fieldset>
+                <legend>Pilot Credentials</legend>
+            <label for="pilot-name">Pilot Name:</label><br>
+                <input type="text" id="pilot-name" 
+                name="pilot-name" required placeholder="Enter name"><br>
+            <label for="code">Access Code:</label><br>
+                <input type="password" id="code" name="access-code" required><br>
+            <label for="email">Command Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                <legend>Vessel Diagnostics</legend>
+            <label for="damage">Hull Damage(%)</label><br>
+                <input type="number" id="damage" name="hull_damage" required><br>
+            <label for="level">Emengercy Level</label><br>
+                <select id="level" name="emergency-level" required>
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Mission Log % Evidance</legend>
+                <label for="message">SOS Message:</label><br>
+                <textarea id="message" name="SOS-message" required rows="3"></textarea><br>
+                <div>
+                    <input type="checkbox" id="quarantine" name="protocols" required><br>
+                    <label for="quarantine">i agree to quarantine protocols</label>
+                </div>
+            </fieldset>
+            <button type="submit">INITIATE TRANSMISSION</button>
+            <button type="reset">RESET SYSTEM</button>
+        </form>
+     <script src="./scripts/launch.js"></script>
+    </body>
+</html>
