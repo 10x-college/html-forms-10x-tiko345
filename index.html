@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width initial-scale-1.0">   
+       <title>Jovian Drift SOS</title>
+       <link rel="stylesheet" href="./styles/styles.css"> 
+    </head>
+    <body>
+        <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+        <form method="post" action="#">
+            <fieldset>
+                <legend>Pilot Credentials</legend>
+            <label for="pilot-name">Pilot Name:</label>
+                <input type="text" id="pilot-name" 
+                name="pilot-name" required placeholder="Enter name">
+            <label for="code">Access Code:</label>
+                <input type="password" id="code" name="access-code" required>
+            <label for="email">Command Email:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                <legend>Vessel Diagnostics</legend>
+            <label for="damage">Hull Damage(%)</label>
+                <input type="number" id="damage" name="hull_damage" required>
+            <label for="level">Emengercy Level</label>
+                <select id="level" name="emergency-level" required>
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Mission Log % Evidance</legend>
+                <label for="message">SOS Message:</label>
+                <textarea id="message" name="SOS-message" required rows="3"></textarea>
+                <div>
+                    <input type="checkbox" id="quarantine" name="protocols" required>
+                    <label for="quarantine">i agree to quarantine protocols</label>
+                </div>
+            </fieldset>
+            <button type="submit">INITIATE TRANSMISSION</button>
+            <button type="reset">RESET SYSTEM</button>
+        </form>
+     <script src="./scripts/launch.js"></script>
+    </body>
+</html>
